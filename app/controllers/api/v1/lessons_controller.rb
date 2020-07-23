@@ -20,6 +20,12 @@ class Api::V1::LessonsController < ApplicationController
         render json: LessonSerializer.new(lesson)
     end 
 
+    def destroy 
+        lesson = Lesson.find(params[:id])
+        lesson.destroy 
+        render json: "Lesson Deleted Successfully"
+    end 
+
     private 
     def lesson_params 
         params.require(:lesson).permit(:name, :description, :notes, :enrollment_id)
