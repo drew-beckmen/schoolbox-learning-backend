@@ -14,6 +14,12 @@ class Api::V1::LessonsController < ApplicationController
         render json: LessonSerializer.new(lesson)
     end 
 
+    def update 
+        lesson = Lesson.find(params[:id])
+        lesson.update(lesson_params)
+        render json: LessonSerializer.new(lesson)
+    end 
+
     private 
     def lesson_params 
         params.require(:lesson).permit(:name, :description, :notes, :enrollment_id)
