@@ -8,6 +8,7 @@ Rails.application.routes.draw do
       resources :platforms, only: [:index, :show, :create]
       resources :lessons, only: [:index, :show, :create, :update, :destroy]
       resources :flashcards, only: [:index, :show, :create, :update, :destroy]
+      resources :recommendations, only: [:index]
     end 
   end 
 end
