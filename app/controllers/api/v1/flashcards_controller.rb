@@ -9,6 +9,12 @@ class Api::V1::FlashcardsController < ApplicationController
         render json: FlashcardSerializer.new(flashcard)
     end 
 
+    def update 
+        flashcard = Flashcard.find(params[:id])
+        flashcard.update(flashcard_params)
+        render json: FlashcardSerializer.new(flashcard)
+    end 
+
     private 
     def flashcard_params
         params.require(:flashcard).permit(:term, :definition, :lesson_id)
