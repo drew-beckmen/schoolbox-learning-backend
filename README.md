@@ -1,9 +1,14 @@
-# README
+# Schoolbox Backend
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This repository contains the backend for my final project at the Flatiron School. The backend is built using Ruby on Rails with the FAST JSON API gem to serialize the data accessed by the frontend using AJAX. 
 
-Things you may want to cover:
+## Additional Information: 
+
+### Database Diagram: 
+![Database](./app/assets/database-diagram.png)
+
+
+### Author: Drew Beckmen 
 
 * Ruby version
 
